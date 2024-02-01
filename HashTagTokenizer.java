@@ -39,17 +39,15 @@ public class HashTagTokenizer {
 
         int N = hashtag.length();
         for (int i = 1; i <= N; i++) {
-			for (int j = 0; j < 3000; j++){
+			if(existInDictionary(hashtag.substring(0, i), dictionary)) {
+				System.out.println(hashtag.substring(0, i));
 
-				if(existInDictionary(hashtag.substring(0, i), dictionary)) {
-					System.out.println(hashtag.substring(0, i));
-
-					hashtag = hashtag.replace(hashtag.substring(0, i), "");
-					// Recursive call
-					breakHashTag(hashtag, dictionary);
-                
-					// Exits the inner loop after finding a match
-					return;
+				hashtag = hashtag.replace(hashtag.substring(0, i), "");
+				// Recursive call
+				breakHashTag(hashtag, dictionary);
+			
+				// Exits the inner loop after finding a match
+				return;
 				}
 			}
 		}
