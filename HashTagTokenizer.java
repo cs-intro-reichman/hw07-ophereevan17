@@ -53,8 +53,5 @@ public class HashTagTokenizer {
 				}
 			}
 		}
-	 
-		// Recursive call outside the inner loop
-		breakHashTag(hashtag, dictionary);
 	}
 }
