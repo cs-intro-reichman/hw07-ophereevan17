@@ -49,7 +49,6 @@ public class HashTagTokenizer {
 				// Exits the inner loop after finding a match
 				return;
 				}
-			}
 		}
 	}
 }
